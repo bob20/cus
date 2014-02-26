@@ -21,9 +21,13 @@ if (login_check($mysqli) == true) {
 <html>
 <head>
     <title>Secure Login: Log In</title>
-    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/JavaScript" src="js/sha512.js"></script>
-    <script type="text/JavaScript" src="js/forms.js"></script>
+    <script type="text/JavaScript" src="js/form.js"></script>
 </head>
 <body>
 <?php
@@ -31,12 +35,12 @@ if (isset($_GET['error'])) {
     echo '<p class="error">Error Logging In!</p>';
 }
 ?>
-<form action="includes/process_login.php" method="post" name="login_form">
+<form action="include/process_login.php" method="post" name="login_form">
     Email: <input type="text" name="email" />
     Password: <input type="password"
                      name="password"
                      id="password"/>
-    <input type="button"
+    <input class="btn-default btn-success" type="button"
            value="Login"
            onclick="formhash(this.form, this.form.password);" />
 </form>

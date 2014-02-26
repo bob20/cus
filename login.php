@@ -35,6 +35,8 @@ if (isset($_GET['error'])) {
     echo '<p class="error">Error Logging In!</p>';
 }
 ?>
+<img src="pic/cus.jpg" alt=""/>
+
 <form action="include/process_login.php" method="post" name="login_form">
     Email: <input type="text" name="email" />
     Password: <input type="password"
